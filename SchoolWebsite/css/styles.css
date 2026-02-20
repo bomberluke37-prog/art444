@@ -1,6 +1,7 @@
 /* CSS GOES HERE */
 html {
-    font-family: Arial, Helvetica, sans-serif !important;
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.2em 0.3em;
 }
 body {
     margin: 0;
@@ -9,6 +10,7 @@ body {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    background-color: beige;
     
 }
 ol li {
@@ -20,10 +22,6 @@ div#wrapper {
 div.text-wrapper {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-a[href="index.html"] {
-    color: red;}
-
 div p:nth-child(1) {
     font-size: 14px;
 }
@@ -31,9 +29,9 @@ div p:nth-child(1) {
 section {
     padding: 60px 20px;
 }
-section:nth-child(even) {
+/*section:nth-child(even) {
     background-color: #f2f2f2;
-}
+}*/
 .container {
     width: 100%;
     max-width: 960px;
@@ -43,6 +41,12 @@ section:nth-child(even) {
 h1 {
     font-size: 3em;
 }
+h2 {
+    font-size: 1.5em;
+}
+p {
+    font-size: 1.2em;
+}
 section .gallery {
     width: 100%;
 }
@@ -50,8 +54,51 @@ section .gallery img {
     width: 32%;
 }
 footer {
-    background-color: #000;
+    background-color: #4D71AC;
     color: #fff;
     padding: 10px;
 }
-img { max-width: 100%; height: auto; }
+img { 
+    max-width: 100%; height: auto;
+border: 5px solid black;
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+border-style: solid;
+}
+
+.navbar {
+    padding: 20px;
+    background-color: #4D71AC;
+    overflow: hidden;
+}
+.navbar a, footer a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-size: 1.2em;
+}
+a:hover {
+    background-color: white;
+    color: black;
+    border: black solid 1px;
+}
+img:hover {
+    transform: scale(1.2);
+    transition: transform 0.1s ease-in-out;
+}
+.button-container {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10em;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color:#4D71AC;
+}

@@ -34,7 +34,7 @@ section {
 }*/
 .container {
     width: 100%;
-    max-width: 960px;
+    max-width: 90%;
     text-align: left;
     margin: 0 auto;
 }
@@ -101,4 +101,7 @@ img:hover {
 a {
     text-decoration: none;
     color:#4D71AC;
+}
+p {
+    max-width: 40%;
 }

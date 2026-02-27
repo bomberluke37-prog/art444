@@ -33,22 +33,27 @@ div p:nth-child(1) {
 section {
     padding: 60px 20px;
 }
-/*section:nth-child(even) {
+section:nth-child(odd) {
     background-color: #f2f2f2;
-}*/
+}
 .container {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
     text-align: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 800px;
+}
+.pfp {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
 }
 .semester {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -83,42 +88,36 @@ body {
 }
 
 .gallery {
-display: flex;
-flex-wrap: wrap;
-padding: 0 4px;
-flex-wrap: wrap
-flex-direction: row
-align-content: normal
-justify-content: normal
-align-items: normal
+    padding: 10px;
+    width: 100%;
 }
 
-/* Create four equal columns that sits next to each other */
+/* Four-column grid layout */
 .column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    width: 100%;
 }
 
 .column img {
-  margin-top: 8px;
-  vertical-align: middle;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* Responsive: 2 columns on tablet */
 @media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
+    .column {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive: 1 column on mobile */
 @media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
+    .column {
+        grid-template-columns: 1fr;
+    }
 }
 /* img {
     width: auto;
@@ -146,6 +145,7 @@ a:hover {
     background-color: white;
     color: black;
     border: black solid 1px;
+    text-decoration: underline;
 }
 img:hover {
     transform: scale(1.2);
@@ -167,10 +167,13 @@ a {
     color:#4D71AC;
 }
 img {
-    width: 100%;
+    width: 44%;
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
     border: 5px solid black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+li {
+    font-style: italic;
 }

@@ -3,6 +3,10 @@ html {
     font-family: Georgia, 'Times New Roman', Times, serif !important;
     text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.2em 0.3em;
 }
+:root {
+    --primary-bg-color: beige;
+    --primary-color: #4D71AC;
+}
 * {
   box-sizing: border-box;
 }
@@ -14,7 +18,7 @@ body {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    background-color: beige;
+    background-color: var(--primary-bg-color);
     
 }
 ol li {

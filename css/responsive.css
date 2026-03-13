@@ -1,12 +1,28 @@
 /* TABLET VIEW */
 @media only screen and (max-width:992px) {
-
+h1 { font-size: 2em; }
+  h2 { font-size: 1.2em; }
+  p { font-size: 1em; }
 }
 
 
 /* MOBILE VIEW */
 @media only screen and (max-width: 478px) {
-    h1 {
-        font-size: 2em;
+h1 { font-size: 2em; }
+  h2, h3, h4 { font-size: 1.2em; }
+  p { font-size: 1em; }
+    }
+
+/* Responsive: 2 columns on tablet (THIS IS FOR THE GALLERY)*/
+@media screen and (max-width: 800px) {
+    .column {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive: 1 column on mobile (ALSO 4 GALLERY, yes I want to keep 2 image columns for mobile)*/
+@media screen and (max-width: 600px) {
+    .column {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

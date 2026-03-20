@@ -37,16 +37,17 @@ document.querySelectorAll('section, .gallery, img:not(.pfp)').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
-// THIS IS THE CLASS MANIPULATION AND EVENT LISTENER SCRIPT BUTTON
-  const headline = document.querySelector('#header h1');
+/* THIS IS THE CLASS MANIPULATION AND EVENT LISTENER SCRIPT BUTTON
+const headline = document.querySelector('#header h1');
   function addClassName() {
     headline.classList.add('fancy');
     console.log('Class added!');
 }
+
 function removeClassName() {
   headline.classList.remove('fancy');
   console.log('Class removed!');
-}
+
 
 const firstButton = document.getElementById("first-button");
 const secondButton = document.getElementById("second-button");
@@ -57,3 +58,19 @@ firstButton.addEventListener("click", function() {
 secondButton.addEventListener("click", function() {
     alert("You clicked the second button!");
 });
+*/
+// SCROLL SCRIPT
+const navbar = document.querySelector('.navbar');
+ function addClassName() {
+      navbar.classList.add('fixed');
+ }
+ function removeClassName() {
+      navbar.classList.remove('fixed');
+ }
+window.onscroll = function(){
+  if (window.scrollY > 0) {
+    addClassName();
+  } else {
+    removeClassName();
+  }
+};

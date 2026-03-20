@@ -26,3 +26,19 @@ h1 { font-size: 2em; }
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.navbar.fixed {
+    animation: opacity 3s ease-in-out forwards;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

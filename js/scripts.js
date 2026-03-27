@@ -59,7 +59,6 @@ secondButton.addEventListener("click", function() {
     alert("You clicked the second button!");
 });
 */
-// SCROLL SCRIPT
 const navbar = document.querySelector('.navbar');
  function addClassName() {
       navbar.classList.add('fixed');
@@ -74,3 +73,32 @@ window.onscroll = function(){
     removeClassName();
   }
 };
+// end of scroll script
+
+const mainNav = document.querySelector('.dropdown-content');
+const navLink = document.querySelectorAll('a');
+for (let i = 0; i < navLink.length; i++) {
+  navLink[i].addEventListener('click', function(e) {
+    alertMessage();
+  });
+}
+
+function alertMessage() {
+  alert('You clicked a navigation link!');
+  setTimeout(() => { /* alert can't close programmatically */ }, 1);
+}
+
+
+// BURGER MENU SCRIPT
+const burger = document.getElementById('burger');
+const menu = document.querySelector('.dropdown');
+
+burger.addEventListener('click', function() {
+  menu.classList.toggle('active');
+});
+
+menu.addEventListener('click', function(e) {
+  if (e.target.tagName === 'A') {
+    menu.classList.toggle('active');
+  }
+});

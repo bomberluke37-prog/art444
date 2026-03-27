@@ -34,6 +34,11 @@ h1 { font-size: 2em; }
     width: 100%;
     z-index: 1000;
 }
+
+.navbar {
+    z-index: 1000;
+    position: relative;
+}
 @keyframes opacity {
     from {
         opacity: 0;

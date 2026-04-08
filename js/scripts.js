@@ -102,3 +102,13 @@ menu.addEventListener('click', function(e) {
     menu.classList.toggle('active');
   }
 });
+
+function NightMode() 
+  const dark = (function() {
+    const hour = new Date().getHours();
+    if (hour >= 18 || hour < 6) {
+      return true;
+    } else {
+      return false;
+    }
+  })();

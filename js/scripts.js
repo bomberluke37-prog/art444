@@ -103,12 +103,9 @@ menu.addEventListener('click', function(e) {
   }
 });
 
-function NightMode() 
-  const dark = (function() {
-    const hour = new Date().getHours();
-    if (hour >= 18 || hour < 6) {
-      return true;
-    } else {
-      return false;
-    }
-  })();
+function NightMode() {
+  const h = new Date().getHours();
+  document.documentElement.classList.toggle('night', h >= 18 || h < 6);
+}
+NightMode();
+

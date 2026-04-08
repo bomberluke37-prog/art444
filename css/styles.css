@@ -358,3 +358,13 @@ a {
 a:hover {
     color:black
 }
+
+/* Javascript-triggered Night Mode */
+:root.night {
+  --primary-bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+}
+
+body {
+  color: var(--text-color, #333333);
+}

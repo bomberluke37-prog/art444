@@ -75,20 +75,6 @@ window.onscroll = function(){
 };
 // end of scroll script
 
-const mainNav = document.querySelector('.dropdown-content');
-const navLink = document.querySelectorAll('a');
-for (let i = 0; i < navLink.length; i++) {
-  navLink[i].addEventListener('click', function(e) {
-    alertMessage();
-  });
-}
-
-function alertMessage() {
-  alert('You clicked a navigation link!');
-  setTimeout(() => { /* alert can't close programmatically */ }, 1);
-}
-
-
 // BURGER MENU SCRIPT
 const burger = document.getElementById('burger');
 const menu = document.querySelector('.dropdown');
@@ -107,5 +93,9 @@ function NightMode() {
   const h = new Date().getHours();
   document.documentElement.classList.toggle('night', h >= 18 || h < 6);
 }
-NightMode();
 
+const moon = document.getElementById('moon');
+
+moon.addEventListener('click', function() {
+  document.documentElement.classList.toggle('night');
+});

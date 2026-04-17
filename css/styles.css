@@ -56,7 +56,7 @@ section {
     text-align: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1000px;
 }
 .pfp {
     width: 50%;
@@ -64,7 +64,7 @@ section {
     border-radius: 10px;
 }
 .semester {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -404,3 +404,6 @@ body {
 .semester p{
 max-width: 600px;
 }
+
+.gallery fade-in visible
+max-width: 1000px;

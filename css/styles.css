@@ -56,7 +56,7 @@ section {
     text-align: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 900px;
 }
 .pfp {
     width: 50%;
@@ -64,7 +64,7 @@ section {
     border-radius: 10px;
 }
 .semester {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -102,6 +102,7 @@ body {
 .gallery {
     padding: 10px;
     width: 100%;
+    max-width: 900px;
 }
 
 /* Four-column grid layout */
@@ -387,4 +388,19 @@ a:hover {
 body {
   color: var(--text-color, #333333);
   transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.nav-container ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+    font-size: 1.5em;
+    align-items: center;
+
+}
+
+.semester p{
+max-width: 600px;
 }

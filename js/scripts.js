@@ -79,23 +79,34 @@ window.onscroll = function(){
 const burger = document.getElementById('burger');
 const menu = document.querySelector('.dropdown');
 
-burger.addEventListener('click', function() {
-  menu.classList.toggle('active');
-});
-
-menu.addEventListener('click', function(e) {
-  if (e.target.tagName === 'A') {
+if (burger && menu) {
+  burger.addEventListener('click', function() {
     menu.classList.toggle('active');
-  }
-});
+  });
+
+  menu.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+      menu.classList.toggle('active');
+    }
+  });
+}
 
 function NightMode() {
   const h = new Date().getHours();
   document.documentElement.classList.toggle('night', h >= 18 || h < 6);
 }
 
+NightMode();
+
 const moon = document.getElementById('moon');
+
+// Restore night mode preference on page load
+if (localStorage.getItem('nightMode') === 'on') {
+  document.documentElement.classList.add('night');
+}
 
 moon.addEventListener('click', function() {
   document.documentElement.classList.toggle('night');
+  const isNight = document.documentElement.classList.contains('night');
+  localStorage.setItem('nightMode', isNight ? 'on' : 'off');
 });

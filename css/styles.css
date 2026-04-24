@@ -257,6 +257,8 @@ ul {
 h1 {
   animation: myAnimation 5s infinite;
   font-size: 4em;
+  padding: 10px;
+  margin: 30px;
 }
 .fade-in {
   opacity: 0.25;
@@ -432,9 +434,6 @@ main {
 
 a,
 p,
-h1 {
-	margin: 0;
-}
 
 html {
 	height: 100%;

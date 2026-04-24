@@ -101,12 +101,19 @@ NightMode();
 const moon = document.getElementById('moon');
 
 // Restore night mode preference on page load
-if (localStorage.getItem('nightMode') === 'on') {
+if (localStorage.getItem('nightMode') === 'night') {
   document.documentElement.classList.add('night');
+} else {
+  document.documentElement.classList.remove('night');
 }
 
 moon.addEventListener('click', function() {
   document.documentElement.classList.toggle('night');
   const isNight = document.documentElement.classList.contains('night');
-  localStorage.setItem('nightMode', isNight ? 'on' : 'off');
+  localStorage.setItem('nightMode', isNight ? 'night' : 'day');
+  if (isNight) {
+    document.documentElement.style.transition = 'none';
+  }
+    
 });
+

@@ -98,6 +98,24 @@ function NightMode() {
 
 NightMode();
 
+// TYPING EFFECT
+(function() {
+  const el = document.querySelector('.typing-demo');
+  if (!el) return;
+  const text = el.textContent.trim();
+  el.textContent = '';
+  let i = 0;
+  function typeChar() {
+    if (i < text.length) {
+      el.textContent += text[i++];
+      setTimeout(typeChar, 55);
+    } else {
+      el.classList.add('typing-done');
+    }
+  }
+  typeChar();
+})();
+
 const moon = document.getElementById('moon');
 
 // Restore night mode preference on page load
@@ -116,4 +134,3 @@ moon.addEventListener('click', function() {
   }
     
 });
-

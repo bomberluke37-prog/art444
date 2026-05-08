@@ -46,6 +46,7 @@ div p:nth-child(1) {
 
 section {
     padding: 50px 20px;
+    scroll-margin-top: 55px;
 }
 
 section + section {

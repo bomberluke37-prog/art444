@@ -696,6 +696,20 @@ h7 {
   font-size: 1.8em;
   font-style: italic;
   animation: blink 0.5s step-end infinite alternate;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .typing-demo {
+    white-space: normal;
+    overflow: visible;
+    font-size: 1.2em;
+    border-right: none;
+    animation: none;
+  }
+  .typing-demo.typing-done {
+    border-right-color: transparent;
+  }
 }
 
 .typing-demo.typing-done {

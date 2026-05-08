@@ -119,15 +119,14 @@ body {
 
 /* Four-column gallery layout */
 .column {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 8px;
     width: 100%;
-    justify-content: center;
 }
 
 .column img {
-    width: calc(25% - 6px);
+    width: 100%;
     height: auto;
     vertical-align: middle;
 }

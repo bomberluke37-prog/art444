@@ -395,6 +395,7 @@ h1 {
     0.2s background-color;
 }
 html {
+  scroll-behavior: smooth;
 }
 
 a {

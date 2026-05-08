@@ -59,8 +59,8 @@ section {
     max-width: 1000px;
 }
 .pfp {
-    width: 30%;
-    height: 30%;
+    width: 20%;
+    height: 20%;
     border-radius: 10px;
 }
 .semester {
@@ -76,6 +76,7 @@ h6 {
 }
 h2 {
     font-size: 1.5em;
+    text-decoration: underline;
 }
 p {
     font-size: 1.2em;
@@ -410,7 +411,7 @@ body {
 }
 
 .semester p{
-max-width: 600px;
+
 }
 
 .gallery .fade-in.visible {
@@ -438,8 +439,6 @@ main {
 }
 
 a,
-p,
-
 html {
 	height: 100%;
 }
@@ -673,7 +672,7 @@ h7 {
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-size: clamp(0.9rem, 3.8vw, 2rem);
+  font-size: 1.2em;
   font-style: italic;
   animation: blink 0.5s step-end infinite alternate;
 }
@@ -694,3 +693,13 @@ h7 {
   bottom: 0;
   padding: 20px;
 }
+
+ul.class-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+
+  width: 100%;
+    }

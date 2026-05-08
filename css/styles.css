@@ -75,8 +75,14 @@ h6 {
     font-size: 3em;
 }
 h2 {
-    font-size: 1.5em;
+    font-size: 2.4em;
     text-decoration: underline;
+}
+h4 {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4em;
 }
 p {
     font-size: 1.2em;
@@ -151,12 +157,18 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 .button-container {
     background-color: #000000;
     color: white;
-    border: beige solid 1px;
+    border: 2px solid black;
     padding: 10px 20px;
     border-radius: 10em;
     font-size: 1.2em;
     cursor: pointer;
     text-decoration: none;
+}
+
+.button-container:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
 a {
@@ -327,6 +339,7 @@ h1 {
   pointer-events: none;
   transition: opacity 0.2s ease, visibility 0.2s ease;
   align-content: center;
+  text-decoration: none; !important;
 }
 .dropdowncontent {
   display: flex;
@@ -407,11 +420,12 @@ body {
     margin: 20px;
     font-size: 1.5em;
     align-items: center;
+    text-decoration: none; !important;
 
 }
 
 .semester p{
-
+    max-width: 800px;
 }
 
 .gallery .fade-in.visible {
@@ -672,7 +686,7 @@ h7 {
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-size: 1.2em;
+  font-size: 1.8em;
   font-style: italic;
   animation: blink 0.5s step-end infinite alternate;
 }
@@ -694,12 +708,21 @@ h7 {
   padding: 20px;
 }
 
-ul.class-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+.semester ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  flex-direction: column;
   list-style-type: none;
   padding: 0;
-
+  text-decoration: none;
+  text-align: center;
   width: 100%;
-    }
+}
+
+.semester ul li {
+  font-style: normal;
+  font-size: 1.2em;
+}
+
